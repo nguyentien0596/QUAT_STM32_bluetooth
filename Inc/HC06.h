@@ -6,4 +6,5 @@ extern volatile char rcvBuffer[];
 extern volatile char rcvMessage[];
 extern UART_HandleTypeDef huart1;
 extern void USART1_UART_Init(void);
+extern uint8_t Quat_ModeStatus_old;
 void HC06_transmit(void);

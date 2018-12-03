@@ -2,6 +2,8 @@
 #include "DHT11.h"
 #include "QUAT.h"
 #include "Delay.h"
+
+uint8_t Quat_ModeStatus_old=0;
 UART_HandleTypeDef huart1;
 char HC06_buff[20];
 uint8_t data=0;
@@ -38,7 +40,7 @@ void HC06_transmit(void)
 			sprintf(buff_Transmit,"%d`C %d %d OFF",NhietDO,Quat_Level,Doam);
 		}
 		UART_transmit(buff_Transmit);
-		Delay_ms(1);
+		Delay_ms(10);
 }
 
 
@@ -56,14 +58,17 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 			sprintf(buff_Transmit,"%s",pdest);
 			if(pdest != NULL)
 				{
+					
 					if(*(pdest+4) == '0')
 						{
 							Quat_ModeStatus = MODE_AUTO;
 							HAL_GPIO_WritePin(PORT_OUT, PIN_OUT_MODE, GPIO_PIN_SET);
+							HC06_transmit();
 						} else if(*(pdest+4) == '1')
 						{
 							Quat_ModeStatus = MODE_HAND;
 							HAL_GPIO_WritePin(PORT_OUT, PIN_OUT_MODE, GPIO_PIN_RESET);
+							HC06_transmit();
 						}
 						
 				} else {

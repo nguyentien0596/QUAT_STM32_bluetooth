@@ -18,6 +18,7 @@ char buf2[16];
 char buf3[16];
 char buf4[16];
 uint16_t countsent=0;
+
 int main(void)
 {
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
@@ -40,13 +41,11 @@ int main(void)
 	LCD_GotoXY(0,1);
 	LCD_Print(" TRAN DAT TUYEN");
 	Delay_ms(5000);
+	Quat_ModeStatus_old=Quat_ModeStatus;
   while (1)
   {
-		for(uint8_t i=0;i<20;i++)
-		{
-			Quat_Loop();
-		}
-	if(countsent==100)
+	Quat_Loop();
+	if(countsent==30)
 		{
 			HC06_transmit();
 			countsent =0;
@@ -56,12 +55,12 @@ int main(void)
 		sprintf(buf1,"DoAm:%d",Doam);
 		sprintf(buf2,"Nhiet:%d",NhietDO);
 		sprintf(buf3,"So:%d",Quat_Level);
-		if(Quat_ModeStatus == MODE_AUTO)
-			{
-				sprintf(buf4,"TUDONG");
-			} else {
-				sprintf(buf4,"   TAY");
-			}
+//		if(Quat_ModeStatus == MODE_AUTO)
+//			{
+//				sprintf(buf4,"TUDONG");
+//			} else {
+//				sprintf(buf4,"   TAY");
+//			}
 		
 		LCD_Cls();
 		LCD_GotoXY(0,0);
