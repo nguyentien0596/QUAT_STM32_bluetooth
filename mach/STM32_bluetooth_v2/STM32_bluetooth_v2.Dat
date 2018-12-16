@@ -1,0 +1,29 @@
+﻿Field=#~Integer~#~50|Field=Comment~String~Comment~100|Field=Description~String~Description~100|Field=Designator~String~Designator~100|Field=Footprint~String~Footprint~100|Field=LibRef~String~LibRef~100|Field=Quantity~Integer~Quantity~100|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~STM32_bluetooth_v2.PrjPcb|ReportField=ProjectFullPath~E:\DOAN\Doan thue\quat_stm32_bluetooth\STM32_bluetooth_v2\STM32_bluetooth_v2.PrjPcb|ReportField=Title~Bill of Materials For Project [STM32_bluetooth_v2.PrjPcb] (No PCB Document Selected)|ReportField=TotalQuantity~56|ReportField=ReportTime~00:56:08|ReportField=ReportDate~2018-12-05|ReportField=ReportDateTime~2018-12-05 00:56:08|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=Address1~|ReportField=Address2~|ReportField=Address3~|ReportField=Address4~|ReportField=Application_BuildNumber~|ReportField=ApprovedBy~|ReportField=Author~Tran Dat Tuyen|ReportField=CheckedBy~|ReportField=CompanyName~|ReportField=CurrentDate~2018-12-05|ReportField=CurrentTime~00:56:06|ReportField=Date~|ReportField=DocumentFullPathAndName~E:\DOAN\Doan thue\quat_stm32_bluetooth\STM32_bluetooth_v2\schematic.SchDoc|ReportField=DocumentName~schematic.SchDoc|ReportField=DocumentNumber~1|ReportField=DrawnBy~Tran Dat Tuyen|ReportField=Engineer~|ReportField=ImagePath~|ReportField=ModifiedDate~2018-12-05|ReportField=Namedesign~Tran Dat Tuyen|ReportField=Organization~|ReportField=PageSetup~Record=PageOptions:CenterHorizontal=True:CenterVertical=True:PrintScale=0.94:XCorrection=1.00:YCorrection=1.00:PrintKind=0:BorderSize=5000000:LeftOffset=0:BottomOffset=0:Orientation=2:PaperLength=1000:PaperWidth=1000:Scale=100:PaperSource=7:PrintQuality=-3:MediaType=1:DitherType=10:PrintScaleMode=1:PaperKind=Letter:PaperIndex=1|ReportField=Project~Quat Thong minh dieu khien qua bluetooth|ReportField=ProjectName~STM32_bluetooth_v2.PrjPcb|ReportField=Revision~1.0|ReportField=Rule~|ReportField=SheetNumber~1|ReportField=SheetTotal~1|ReportField=Time~|ReportField=Title~STM32-Bluetooth-Quat|ReportField=DataSourceFileName~STM32_bluetooth_v2.PrjPcb|ReportField=DataSourceFullPath~E:\DOAN\Doan thue\quat_stm32_bluetooth\STM32_bluetooth_v2\STM32_bluetooth_v2.PrjPcb
+1|DC-5V|power 5v dc|B1|AC-DC_LK-PM01|AC-DC|1
+2|104||C1, C2, C3, C6, C7, C10, C12, C13, C14, C15|RES0805|CAP|10
+3|22uF||C4, C5, C8, C9, C11|CAP_T_3528–21_CASE-B|CAP_E|5
+4|CONTAC||CT1|HDR1X2200Mil|CONTAC|1
+5|MODE||D1|LED3|LED|1
+6|5V||D2|LED3|LED|1
+7|LOW||D3|LED3|LED|1
+8|MED||D4|LED3|LED|1
+9|SWING||D5|LED3|LED|1
+10|Fuse 2A|Fuse 1A 3.6mmx10mm|F1|FUSE_PIN-W2/E2.8|FUSE|1
+11|16x2|16 PIN|J1|LCD16x2_16PIN|LCD16X2|1
+12|220 INPUT|Header, 2-Pin|P1|TERMINAL_2PIN_1|Header 2|1
+13|Low|Header, 2-Pin|P2|TERMINAL_2PIN_1|Header 2|1
+14|DHT11|Header, 3-Pin|P3|HDR1X3|Header 3|1
+15|Med|Header, 2-Pin|P4|TERMINAL_2PIN_1|Header 2|1
+16|High|Header, 2-Pin|P5|TERMINAL_2PIN_1|Header 2|1
+17|MAC97A8|Triac 600V 0.6A|Q1, Q2, Q3|TO92D|MAC97A8|3
+18|220||R1, R4, R5, R7, R9|RES0805|RES|5
+19|150||R2, R3, R15|RES0805|RES|3
+20|100||R6, R8, R10|RES0805|RES|3
+21|10k||R11, R12, R13, R14|RES0805|RES|4
+22|MODE||SW1|SW_4PIN_6x6x5|SW_4PIN|1
+23|LOW||SW2|SW_4PIN_6x6x5|SW_4PIN|1
+24|MED||SW3|SW_4PIN_6x6x5|SW_4PIN|1
+25|HIGH||SW4|SW_4PIN_6x6x5|SW_4PIN|1
+26|Boar STM32F103||U1|KIT_STM32F103C8T6_40PIN_2|STM32f103C8T6_KIT2|1
+27|MOC302|Opto 400V|U2, U3, U5|DIP6|MOC3020|3
+28|HC06|bluetooth HC06|U4|BLUETOOTH_HC05_MD|Bluetooth_HC06_MD|1
