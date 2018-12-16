@@ -1,12 +1,15 @@
 #include "QUAT.h"
 #include "DHT11.h"
 #include "Delay.h"
+#include "HC06.h"
 
 QUAT_ModeStatusTypeDef Quat_ModeStatus = MODE_HAND;
 QUAT_LevelStatusTypeDef Quat_Level=LEVEL_OFF;
 uint8_t Quat_nhiet_low	=27;
 uint8_t Quat_nhiet_med	=28;
 uint8_t Quat_nhiet_high	=30;
+uint8_t pin_stage=MODE_HAND;
+
 void QUAT_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct;
@@ -86,6 +89,10 @@ QUAT_PinTypeDef Quat_Button(void)
 			Button = PIN_NONE;
 		}
 	}
+	if (Button!=pin_stage)
+		{
+			HC06_transmit();
+		}
 	return Button;
 }
 void Quat_SwitchMode()

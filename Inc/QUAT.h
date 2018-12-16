@@ -1,4 +1,5 @@
 #include "stm32f1xx_hal.h"
+#include "HC06.h"
 
 #define PORT_IN   GPIOA
 #define PIN_IN_MODE	 GPIO_PIN_3
